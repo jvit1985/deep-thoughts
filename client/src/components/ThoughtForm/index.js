@@ -72,6 +72,7 @@ const ThoughtForm = () => {
                     Submit
                 </button>
             </form>
+            {error && <span className="ml-2">Something went wrong...</span>}
         </div>
     );
 };
