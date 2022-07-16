@@ -5,16 +5,15 @@ import ReactionList from '../components/ReactionList';
 import ReactionForm from '../components/ReactionForm';
 import Auth from "../utils/auth";
 
-const { id: thoughtId } = useParams();
+
+const SingleThought = props => {
+  const { id: thoughtId } = useParams();
 
 const { loading, data } = useQuery(QUERY_THOUGHT, {
-  variables: { id: thoughtID }
+  variables: { id: thoughtId }
 });
 
 const thought = data?.thought || {};
-
-
-const SingleThought = props => {
   if (loading) {
     return <div>Loading...</div>;
   }
