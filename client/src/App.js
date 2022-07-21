@@ -1,7 +1,7 @@
+import React from 'react';
 import { ApolloProvider, ApolloClient, InMemoryCache, createHttpLink } from '@apollo/client';
 import { setContext } from '@apollo/client/link/context';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import React from 'react';
 import Login from './pages/Login';
 import NoMatch from './pages/NoMatch';
 import SingleThought from './pages/SingleThought';
@@ -9,7 +9,6 @@ import Profile from './pages/Profile';
 import Signup from './pages/Signup';
 import Header from './components/Header';
 import Footer from './components/Footer';
-
 import Home from './pages/Home';
 
 const httpLink = createHttpLink({
@@ -42,15 +41,13 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<Signup />} />
-          <Routes>
           <Route path="/profile">
             <Route path=":username" element={<Profile />} />
             <Route path="" element={<Profile />} />
           </Route>
           <Route path="/thought/:id" element={<SingleThought />} 
           />
-          </Routes>
-          <Route path="*" element={<NoMatch />} />
+          <Route path='*' element={<NoMatch />} />
         </Routes>
       </div>
       <Footer />
