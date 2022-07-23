@@ -26,9 +26,7 @@
   },
   "homepage": "https://github.com/jvit1985/deep-thoughts#readme",
   "devDependencies": {
-    "concurrently": "^7.2.2"
-  },
-  "dependencies": {
-    "react-router-dom": "^6.3.0"
+    "concurrently": "^7.2.2",
+    "eslint-plugin-react-hooks": "^4.6.0"
   }
 }
